@@ -107,7 +107,7 @@ Non-balancing trees can become degenerate, forcing one to dive down through $$O(
 I could have stopped there but I wanted to implement an iterative tree traversal, and it turns out that there are [lots of different ways][inorder-impl-wikipedia] to do that.
 Many of those either use a stack of nodes to mimick recursion, or use more involved alternatives such as Morris [threaded binary tree][threaded-tree] in-order traversal.
 
-As much as possible I didn't want to allocate additional memory, and threading a binary seemed complicated at the time.
+As much as possible I didn't want to allocate additional memory, and threading a binary tree seemed complicated at the time.
 Fortunately I had a considerable advantage up my sleeve: parent pointers! Splaying operations often involve following parent nodes, which makes such a traversal much easier.
 Nevertheless I was still a lazy bum, and instead of trying to come up with a smart solution, I did what most millenials do when faced with such an exciting challenge:
 [copy-pasting some code from StackOverflow][inorder-impl-stackoverflow].
@@ -247,7 +247,7 @@ However it effectively reuses knowledge about the algorithm flow to reduce the n
 Amazingly enough, experimental data shows that the number of conditions seems independent of the node values, with $$6n$$ conditions for the previous version and $$4n$$ for the new one.
 
 An additional optimization we can perform here is avoiding to the assignment to `previous` when we know that the variable won't be used before being overwritten again (marks A and B in the code snippet above).
-This improvement however is unlikely to make the algorithm much faster: it saves a few pointers copies, but speed is likely dominated by branching and pointer chasing.
+This improvement however is unlikely to make the algorithm much faster: it might save a few pointer copies, but speed is likely dominated by branching and pointer chasing.
 
 ![Boxplots showcasing 10000 iterations of move_to_1 and move_to_2 over 50000 integers]({{ site.baseurl }}/assets/images/TSB002/move_to_1-vs-move_to_2.png){:.centered}
 
