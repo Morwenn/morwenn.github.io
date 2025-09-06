@@ -2,7 +2,7 @@
 layout: post
 title: "Amp: a new measure of presortedness?"
 date: 2025-06-15
-categories: algorithms, sorting, presortedness
+categories: presortedness
 ---
 
 During the 80s, after decades of trying to find better sorting algorithms, some computer scientists started to formalize the concept of *adaptive sorting*,
