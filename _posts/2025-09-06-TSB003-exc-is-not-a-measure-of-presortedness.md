@@ -30,6 +30,8 @@ Let's take for example the sequence $$\langle 2, 4, 0, 6, 3, 1, 5 \rangle$$. It 
 * ‎$$\langle 2, 0 \rangle$$
 * ‎$$\langle 4, 3, 6, 5, 1 \rangle$$
 
+![Visual representation of the two cycles of exchanges required to sort the aforementioned sequence]({{ site.baseurl }}/assets/images/TSB003/sorting-exchange-cycles.png){:.centered}
+
 As a result, we get $$Exc(X) = \lvert X \rvert - 2 = 5$$.
 
 Mannila then discusses the inuition behind each of the five axioms he picked, and follows with this claim:
@@ -90,6 +92,34 @@ I might have missed something, don't hesitate to reach out to me if you find an 
 $$Exc$$ corresponds to a fairly general problem in computer science and likely appears under other names in another branch of the literature,
 so that result might already be known, yet remain unknown to the literature specific to sorting and presortedness.
 
+## Update (2025-10-04); two approaches of presortedness
 
+After reading this article, Slimane Benloucif made me realize that I had overlooked what might be the answer to this troubling question,
+an additional remark by Mannila right under the five axioms defining what a measure of presortedness is:
+
+> Two approaches to the concept of presortedness or disorder are:
+>
+> a) disorder is quantified by the number of operations of a given type which is needed to order the input (concrete approach);  
+> b) disorder is quantified by how much information of the form $$x_i < x_j$$ is needed to identify the sequence, using a given way of collecting the information (information-theoretic approach).
+
+$$Exc$$ obviously falls within the "concrete approach" category.
+A bit later, this definition is completed by (emphasis mine):
+
+> For approach a), we have to assume that **the set of allowed operations is closed under subsequences**.
+> If we can sort a supersequence of $$X$$ by a certain number of operations, then the restriction of these operations to $$X$$ will sort $$X$$; [...].
+
+To be quite honest, I originally ignored this bit because I have very little mathematical knowledge and was not familiar with the notion of [closure][closure], so the sentence did not make much sense to me.
+Though even armed with this newfound knowledge, I still have troubles making sense of it.
+
+Slimane interprets this restriction in the case of $$Exc$$ as meaning that a supersequence of $$X$$ can only be formed in a way that it does not break existing cycles,
+or as he puts it: only cycle-aware insertions are allowed to form a supersequence of $$X$$.
+
+I am still a tad bit confused to be fairly honest, and clarification from other people who studied those measures would be welcome.
+In the meantime I felt like it was worth updating this article to highlight this confusion, rather than let a potentially wrong title remain unchallenged.
+
+Regardless, many thanks to Slimane.
+
+
+  [closure]: https://en.wikipedia.org/wiki/Closure_(mathematics)
   [cpp-sort]: https://github.com/Morwenn/cpp-sort
   [rapidcheck]: https://github.com/emil-e/rapidcheck
