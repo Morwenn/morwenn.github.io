@@ -59,7 +59,7 @@ Now we get a cute result: a sequence of elements where the variations between ad
 
 Okay, the previous statement is not exactly true: the original sequence has a size of $$\lvert X \rvert$$ while the prefix sum of the pairwise order has a size of $$\lvert X \rvert - 1$$.
 I constructed the plot above by prepending $$0$$ to the prefix sum, which leads to a new sequence of size $$\lvert X \rvert$$ whose variations between pairwise elements match those of the original sequence exactly.
-Interestingly, applying the same series of transformations on that $$0$$-pefixed prefix sum yields the same result again.
+Interestingly, applying the same series of transformations on that $$0$$-prefixed prefix sum yields the same result again.
 
 The plot above looks a bit like the original sequence has a midday shadow, so I decided to call the new structure the *pairwise order shadow* of the sequence, and will simply call it "shadow" for the rest of this article.
 
