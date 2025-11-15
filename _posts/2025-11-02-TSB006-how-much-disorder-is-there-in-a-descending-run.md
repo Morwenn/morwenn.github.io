@@ -20,7 +20,7 @@ A counterexample can be constructed as follows: $$\mathit{Amp}$$ considers a sin
 This simple counterexample, besides crushing my hopes and dreams, made me question how much order there can be in a descending run.
 Which by itself is a bit of a philosophical quest for meaning.
 
-# Intuitive disorder of a descending run
+## Intuitive disorder of a descending run
 
 ![Plot of a descending run: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]({{ site.baseurl }}/assets/images/TSB006/one-descending-run.png){:.centered}
 
@@ -38,7 +38,7 @@ If our goal however is to reorder the elements so that they end up in ascending 
 
 Interestingly, the disorder feels constant when looking at the problem strictly from an ordering point of view, but becomes linear when looking at it through the lens of work needed to reorder the sequence.
 
-# Through the prism of measures of disorder
+## Through the prism of measures of disorder
 
 As an experiment, I decided to give the sequence above to all [measures of disorder][measures-of-disorder] I understand to see what they had to say.
 For readability purposes, I split them in two groups below, based on their answer.
@@ -75,7 +75,7 @@ A second observation is that none of those measures respect Mannila's axioms:
 * $$\mathit{Enc}$$, $$\mathit{Mono}$$ and $$\mathit{SMS}$$ return $$1$$ for a sorted sequence, when axiom 1 expects them to return $$0$$.
 * $$\mathit{Amp}$$ and $$\mathit{Osc}$$ both violate axiom 4 with the example given in the article introduction.
 
-# Symmetry and measures of presortedness: pick one
+## Symmetry and measures of presortedness: pick one
 
 It might seem odd at first that none of the measures of disorder that return $$0$$ or $$1$$ for a descending run qualifies as a measure of presortedness,
 though an explanation might be found in the symmetry property.
@@ -95,7 +95,7 @@ I am unsure whether it is feasible to come up with a different measure of presor
 _Note: this last example is fairly cute because we are back into a territory where some measures find very little disorder, for different reasons:_
 _$$\mathit{Dis}$$ and $$\mathit{Max}$$ return $$1$$ because the inversion distance is minimal, and $$\mathit{SUS}$$ finds $$2$$ because the sequence can easily be decomposed into two increasing subsequences._
 
-# Can we adapt our reverse champions?
+## Can we adapt our reverse champions?
 
 Among the measures discussed in the previous section, $$\mathit{Enc}$$, $$\mathit{Mono}$$ and $$\mathit{SMS}$$ return $$1$$ when given a single ascending run, which violates Mannila's first axiom of what makes a measure of presortedness.
 It would be tempting to define derived measures that simply retrieve $$1$$ from their result,
@@ -124,7 +124,7 @@ As an experiment, I tried to apply the same technique on the other four measures
 
 Welp, I guess it was worth a try. At least those counterexamples save me from having to prove anything formally this time.
 
-# Conclusion
+## Conclusion
 
 I am unsure where exactly I wanted to go when I first started writing this blog post. In the end we only end up with a few weak conclusions:
 * Whether a descending run contains disorder or not depends on how we look at the problem, and on what we want to do with said sequence.
@@ -136,7 +136,7 @@ I am unsure where exactly I wanted to go when I first started writing this blog 
 I hope that I can revisit some aspects touched by this article in the future, and come up with stronger conclusions.
 In the meantime, I do find amusing that trying to answer a question once again opens a few doors towards other questions.
 
-# Notes
+## Notes
 
   [^1]: $$\mathit{Osc}(X)$$ is formally defined as $$\sum_{i=0}^{\lvert X \rvert - 1} \vert \vert \mathit{Cross}(x_i) \vert \vert$$
         where $$\mathit{Cross}(x_i)$$ is the number of links between adjacent pairs that "cross" the value $$x_i$$.

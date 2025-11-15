@@ -92,7 +92,7 @@ I might have missed something, don't hesitate to reach out to me if you find an 
 $$\mathit{Exc}$$ corresponds to a fairly general problem in computer science and likely appears under other names in another branch of the literature,
 so that result might already be known, yet remain unknown to the literature specific to sorting and presortedness.
 
-## Update (2025-10-04); two approaches of presortedness
+## Update (2025-10-04): two approaches of presortedness
 
 After reading this article, Slimane Benloucif made me realize that I had overlooked what might be the answer to this troubling question,
 an additional remark by Mannila right under the five axioms defining what a measure of presortedness is:

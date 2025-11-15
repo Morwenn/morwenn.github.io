@@ -8,7 +8,7 @@ categories: presortedness
 In this article, we analyze the relationship between [the measure of disorder $$\mathit{Amp}$$][TSB001], which I introduced a while ago,
 and the classic [measure of presortedness][measures-of-presortedness] $$\mathit{Runs}$$, the number of ascending runs in a sequence.
 
-# Identity of $$\mathit{Runs}$$
+## Identity of $$\mathit{Runs}$$
 
 $$\mathit{Runs}$$ is probably one of the oldest measures of disorder of interest, both for its conceptual simplicity, ease of computation, and direct application to sorting.
 It counts the number of ascending "runs" in a sequence, that is, the number of already sorted subsequences of adjacent elements.
@@ -31,7 +31,7 @@ The literature around measures of disorder mostly analyzes them over sequence of
 In this article, we also consider sequences where elements can compare equivalent, for which we keep the "step-down" definition of $$\mathit{Runs}$$.
 It technically means that the runs we are considering are _non-decreasing_ sequences of adjacent elements.
 
-# $$\mathit{Amp}$$ and steps-down
+## $$\mathit{Amp}$$ and steps-down
 
 _I am not going to repeat the definition of $$\mathit{Amp}$$ here, because doing so for every new article would be bothersome._
 _If you found this note without having heard of it before, you can refer to the article linked in the introduction._
