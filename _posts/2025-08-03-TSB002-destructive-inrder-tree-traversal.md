@@ -102,7 +102,7 @@ So far we got a beautifully simple algorithm. Call it on the root and it moves y
 
 ## C++ iterative implementation
 
-Technically the recursive version of in-order traversal is enough for our use case: we are using a splay tree, which is self-balancing, so its depth should never exceed $$O(log n)$$.
+Technically the recursive version of in-order traversal is enough for our use case: we are using a splay tree, which is self-balancing, so its depth should never exceed $$O(\log n)$$.
 Non-balancing trees can become degenerate, forcing one to dive down through $$O(n)$$ layers, potentially blowing the stack, though that simply can't happen to us.
 I could have stopped there but I wanted to implement an iterative tree traversal, and it turns out that there are [lots of different ways][inorder-impl-wikipedia] to do that.
 Many of those either use a stack of nodes to mimick recursion, or use more involved alternatives such as Morris [threaded binary tree][threaded-tree] in-order traversal.
