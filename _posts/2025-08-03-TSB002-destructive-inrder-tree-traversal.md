@@ -102,9 +102,8 @@ So far we got a beautifully simple algorithm. Call it on the root and it moves y
 
 ## C++ iterative implementation
 
-Technically the recursive version of in-order traversal is enough for our use case: we are using a splay tree, which is self-balancing, so its depth should never exceed $$O(\log n)$$.
-Non-balancing trees can become degenerate, forcing one to dive down through $$O(n)$$ layers, potentially blowing the stack, though that simply can't happen to us.
-I could have stopped there but I wanted to implement an iterative tree traversal, and it turns out that there are [lots of different ways][inorder-impl-wikipedia] to do that.
+The recursive version of in-order traversal is enough for the average case: splay trees, without being completely self-balancing, are adaptive enough to have an average height of $$O(\log n)$$. They can however become degenerate for specific patterns—such as when constructed over an already sorted collection—, forcing one to dive down through $$O(n)$$ layers, potentially blowing the stack.
+Those edge cases were enough to make me want to implement an iterative tree traversal, and it turns out that there are [lots of different ways][inorder-impl-wikipedia] to do that.
 Many of those either use a stack of nodes to mimick recursion, or use more involved alternatives such as Morris [threaded binary tree][threaded-tree] in-order traversal.
 
 As much as possible I didn't want to allocate additional memory, and threading a binary tree seemed complicated at the time.
@@ -376,7 +375,7 @@ which means that we should be able to notice a difference in speed.
 Looks like a success. Taking advantage of the fact that we won't need our tree after the traversal effectively allowed us to intrusively modify it on the fly and to speed things up.
 
 _Note: I ran the same benchmark several times with similar results; only the number of outliers in the boxplots changes every now and then.
-I decided to keep results where the few outliers don't dwarf the the boxplots entirely (I got one or two reaching 100~150µs),
+I decided to keep results where the few outliers don't dwarf the boxplots entirely (I got one or two reaching 100~150µs),
 as I'd rather keep readable results, and external factors were likely to blame for those._
 
 ## Bonus chatter: traversing the tree again
