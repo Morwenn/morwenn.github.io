@@ -55,9 +55,9 @@ We prove the conjecture with the following reasoning:
 
 $$\begin{aligned}
 \mathit{Shadow}_i(\mathit{Reversed}(X)) & = \sum_{k=1}^i \mathit{Order}_k(\mathit{Reversed}(X))\\
-                                        & = \sum_{k=\lvert X \rvert-i+2}^n -1 * \mathit{Order}_k(X) & \text{ (1) }\\
-                                        & = -1 * \sum_{k=\lvert X \rvert-i+2}^n \mathit{Order}_k(X)\\
-                                        & = -1 * (\sum_{k=1}^{\lvert X \rvert} \mathit{Order}_k(X) - \sum_{k=1}^{\lvert X \rvert-i+1} \mathit{Order}_k(X)) & \text{ (2) }\\
+                                        & = \sum_{k=\lvert X \rvert-i+2}^n -1 \cdot \mathit{Order}_k(X) & \text{ (1) }\\
+                                        & = -1 \cdot \sum_{k=\lvert X \rvert-i+2}^n \mathit{Order}_k(X)\\
+                                        & = -1 \cdot (\sum_{k=1}^{\lvert X \rvert} \mathit{Order}_k(X) - \sum_{k=1}^{\lvert X \rvert-i+1} \mathit{Order}_k(X)) & \text{ (2) }\\
                                         & = \sum_{k=1}^{\lvert X \rvert-i+1} \mathit{Order}_k(X) - \sum_{k=1}^{\lvert X \rvert} \mathit{Order}_k(X)\\
                                         & = \mathit{Shadow}_{\lvert X \rvert-i+1}(X) - \mathit{Shadow}_{\lvert X \rvert}(X)
 \end{aligned}
