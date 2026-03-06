@@ -51,8 +51,8 @@ Recognizing that shortcoming, Estivill-Castro and Wood proposed the following de
 > such as $$c_1 M_1(X) \le M_2(X) \le c_2 M_1(X)$$ for every sequence $$X$$.
 
 Using the results from [a previous article][TSB007], we can show that $$\mathit{Amp}$$ is not equivalent to $$\mathit{Runs}$$:
-indeed, $$\mathit{Runs}(X)$$ returns $$\lvert X \rvert - 1$$ when $$X$$ is sorted in reverse order[^1],
-where $$\mathit{Amp}$$ returns $$0$$ for such sequences.
+indeed, $$\mathit{Runs}(X)$$ returns $$\lvert X \rvert - 1$$ when $$X$$ is sorted in reverse order,
+where $$\mathit{Amp}$$ returns $$0$$ for such sequences[^1].
 This makes it impossible to find a constant $$c_2 > 0$$ such as $$\mathit{Runs}(X) \le c_2 \cdot \mathit{Amp}(X)$$ for every sequence $$X$$.
 
 The linked article also proves that $$\mathit{Amp}(X) \le 2 \mathit{Runs}(X)$$.
@@ -138,7 +138,6 @@ We proved earlier that $$\mathit{Runs}$$ was not algorithmically finer than $$\m
 I actually actually consecrated [a previous article][TSB006] to the topic of descending runs and presortedness,
 which tells us that $$\mathit{Block}$$, $$\mathit{Dis}$$, $$\mathit{Exc}$$, $$\mathit{Ham}$$, $$\mathit{Inv}$$, $$\mathit{Max}$$, $$\mathit{Rem}$$, $$\mathit{Spear}$$ and $$\mathit{SUS}$$ find no sortedness in a descending run.
 It follows that none of those is algorithmically finer than $$\mathit{Amp}$$.
-Transivity completes this list with $$\mathit{Hist}$$.
 
 We can reformulate that statement as follows, with $$M$$ representing any of the aforementioned measures:
 
@@ -180,7 +179,7 @@ For such a sequence, we have $$\mathit{Max}(X) = 1$$ and $$\mathit{Amp} = \lvert
 
 In other words, $$\mathit{Amp}$$ is not algorithmically finer than $$\mathit{Max}$$.
 
-Transitively, this means that $$\mathit{Amp}$$ cannot be algorithmically finer than $$\mathit{Dis}$$, $$\mathit{Inv}$$, $$\mathit{Spear}$$, $$\mathit{Amp}$$, $$\mathit{SUS}$$, $$\mathit{Osc}$$, $$\mathit{Enc}$$, $$\mathit{Hist}$$, $$\mathit{Loc}$$, $$\mathit{SMS}$$ nor $$\mathit{Reg}$$.
+Transitively, this means that $$\mathit{Amp}$$ cannot be algorithmically finer than $$\mathit{Dis}$$, $$\mathit{Enc}$$, $$\mathit{Hist}$$, $$\mathit{Inv}$$, $$\mathit{Loc}$$, $$\mathit{Osc}$$, $$\mathit{Reg}$$, $$\mathit{Spear}$$, $$\mathit{SMS}$$, nor $$\mathit{SUS}$$.
 
 ![Amp in partial ordering of measures of disorder, with some hypotheses pruned]({{ site.baseurl }}/assets/images/TSB008/partial-ordering-amp-2.png){:.centered}
 
@@ -195,9 +194,13 @@ We could show however that some measures were _not_ better than $$\mathit{Amp}$$
 and inversely that $$\mathit{Amp}$$ was not better than some measures.
 Technically, that's enough to prove the non-equivalence of $$\mathit{Amp}$$ and a bunch of those measures.
 
-I can't finish that article without a conjecture:
-my personal feeling is that $$\mathit{Mono} \preceq \mathit{Amp}$$ and $$\mathit{Osc} \preceq \mathit{Mono}$$[^4].
-This means that the complete graph for the partial ordering would look like this:
+I can't finish that article without a conjecture.
+My personal feeling is that the following relations hold:
+* ‎$$\mathit{Amp} \preceq \mathit{Runs}$$
+* ‎$$\mathit{Mono} \preceq \mathit{Amp}$$
+* ‎$$\mathit{Osc} \preceq \mathit{Mono}$$[^4]
+
+Which means that the complete graph for the partial ordering would look like this:
 
 ![Conjectured complete partial ordering of measures of disorder]({{ site.baseurl }}/assets/images/TSB008/partial-ordering-conjecture.png){:.centered}
 
