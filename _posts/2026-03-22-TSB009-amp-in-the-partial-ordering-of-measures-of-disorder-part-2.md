@@ -131,7 +131,7 @@ That's exactly what Jingsen Chen does in *Computing and Ranking Measures of Pres
 > Let $$\mathcal{M}$$ be the set of all measures of presortedness and $$X$$ be the sequence to be sorted.
 > For $$M_1, M_2 \in \mathcal{M}$$, we say that:
 >
-> * $$M_1$$ is _superior_ to $$M_2$$ (denoted $$M_1 \preceq M_2$$) if and only if there is some constant $$c > 0$$ such that $$\lvert \mathit{below}_M_1(X) \rvert \le c \cdot \lvert \mathit{below}_M_2(X) \rvert$$ for any sequence $$X$$.
+> * $$M_1$$ is _superior_ to $$M_2$$ (denoted $$M_1 \preceq M_2$$) if and only if there is some constant $$c > 0$$ such that $$\lvert \mathit{below}_{M_1}(X) \rvert \le c \cdot \lvert \mathit{below}_{M_2}(X) \rvert$$ for any sequence $$X$$.
 > * $$M_1 \equiv M_2$$ if $$M_1 \preceq M_2$$ and $$M_2 \preceq M_1$$.
 
 That definition can be applied to compare the simplest measures of presortedness we have, namely $$m_0$$ and $$m_{01}$$:
@@ -151,8 +151,8 @@ It logically follows that:
 
 $$
 \begin{aligned}
-\lvert \mathit{below}_m_0(X) \rvert &= \lvert X \rvert !\\
-\lvert \mathit{below}_m_{01}(X) \rvert &=
+\lvert \mathit{below}_{m_0}(X) \rvert &= \lvert X \rvert !\\
+\lvert \mathit{below}_{m_{01}}(X) \rvert &=
 \begin{cases}
 1 & \text{if } X \text{ is sorted }\\
 \lvert X \rvert ! & \text{otherwise}
@@ -160,12 +160,12 @@ $$
 \end{aligned}
 $$
 
-We can conclude from it that $$\lvert \mathit{below}_m_{01}(X) \rvert \le \lvert \mathit{below}_m_0(X) \rvert$$ for any sequence $$X$$,
+We can conclude from it that $$\lvert \mathit{below}_{m_{01}}(X) \rvert \le \lvert \mathit{below}_{m_0}(X) \rvert$$ for any sequence $$X$$,
 so $$m_{01} \preceq m_0$$.
-However there is no constant $$c > 0$$ such as $$\lvert \mathit{below}_m_0(X) \rvert \le c \cdot \lvert \mathit{below}_m_{01}(X) \rvert$$,
+However there is no constant $$c > 0$$ such as $$\lvert \mathit{below}_{m_0}(X) \rvert \le c \cdot \lvert \mathit{below}_{m_{01}}(X) \rvert$$,
 so $$m_0 \not \preceq m_{01}$$, and $$m_0 \not \equiv m_{01}$$.
 
-An interesting observation: $$\lvert \mathit{below}_m_0(X) \rvert = \lvert X \rvert ! \sim \lvert X \rvert \log_2 \lvert X \rvert$$ for any sequence $$X$$,
+An interesting observation: $$\lvert \mathit{below}_{m_0}(X) \rvert = \lvert X \rvert ! \sim \lvert X \rvert \log_2 \lvert X \rvert$$ for any sequence $$X$$,
 which means that any $$O(n \log n)$$ sorting algorithm is $$m_0$$-optimal.
 
 That new definition is also enough to demonstrate the case from the first part of this series where $$\mathit{Runs} \not \preceq \mathit{Rem}$$ despite having $$\mathit{Runs}(X) \le \mathit{Rem}(X) + 1$$.
@@ -173,7 +173,7 @@ Mannila proved the following bounds:
 * ‎$$\log \lvert \mathit{below}_{\mathit{Runs}}(X) \rvert = \Omega(\lvert X \rvert \log (1 + \mathit{Runs}(X)))$$
 * ‎$$\log \lvert \mathit{below}_{\mathit{Rem}}(X) \rvert = \Omega(\mathit{Rem}(X) \log (1 + \mathit{Rem}(X)))$$
 
-As such there is no constant $$c > 0$$ such that $$\lvert \mathit{below}_{Runs}(X) \rvert \le c \cdot \lvert \mathit{below}_{Rem}(X) \rvert$$ for any sequence $$X$$.
+As such there is no constant $$c > 0$$ such that $$\lvert \mathit{below}_{\mathit{Runs}}(X) \rvert \le c \cdot \lvert \mathit{below}_{\mathit{Rem}}(X) \rvert$$ for any sequence $$X$$.
 
 ## Computing the *below*-set of $$\mathit{Amp}$$
 
