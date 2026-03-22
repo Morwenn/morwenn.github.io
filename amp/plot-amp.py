@@ -132,6 +132,7 @@ pyplot.text(len(sequence), (min(shadow) + max(shadow)) / 2, f"$PTP(X) = {ptp}$")
 # )
 # pyplot.text(len(sequence)+0.5, (min(shadow2) + max(shadow2)) / 2, f"$PTP(Y) = {ptp2}$")
 
+pyplot.xlabel(f"Amp(X) = {amp}")
 #pyplot.xlabel(f"Amp(X) = {amp}, Amp(Y) = {compute_amp(sequence2)}")
 
 pyplot.xlim(xmin=0, xmax=graph_end)
