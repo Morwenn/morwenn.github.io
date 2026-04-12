@@ -101,7 +101,7 @@ Let $$\mathit{Unique}(X)$$ be a function that associates to the sequence $$X$$ t
 
 $$\mathit{Runs}(\mathit{Unique}(X)) = \mathit{Runs}(X)$$
 
-We follow a similar process for $$\mathit{Mono}$$, where any pair of equal elements is considered as belonging to the run that commes before it[^2].
+We follow a similar process for $$\mathit{Mono}$$, where any pair of equal elements is considered as belonging to the run that comes before it[^2].
 As such, it is equivalent to entirely ignoring $$0$$ elements in the pairwise order, which gives:
 
 $$\mathit{Mono}(\mathit{Unique}(X)) = \mathit{Mono}(X)$$

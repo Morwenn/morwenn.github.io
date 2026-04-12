@@ -100,7 +100,7 @@ Feelings however are not enough, so we're going to try our best to formally prov
 > 1\. If $$X$$ is sorted, then $$M(X) = 0$$
 
 Okay, we're off to a bad start: $$\mathit{PTP}(X)$$ is *maximal* and equal to $$\lvert X \rvert - 1$$ when $$X$$ is sorted.
-Though that does not mean that we can't use it as a measure of presortedness: we can just define the MOP based on $$\mathit{PTP}$$ as $$\lvert X \rvert - \mathit{PTP](X) - 1$$.
+Though that does not mean that we can't use it as a measure of presortedness: we can just define the MOP based on $$\mathit{PTP}$$ as $$\lvert X \rvert - \mathit{PTP}(X) - 1$$.
 This gives us $$0$$ when $$\lvert X \rvert$$ is sorted, but also when $$\lvert X \rvert$$ is sorted in reverse order, which is a better basis for a MOP.
 For the rest of the article, we are going to call that new metric $$\mathit{Amp}$$.
 
