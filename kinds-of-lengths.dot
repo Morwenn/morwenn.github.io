@@ -1,0 +1,19 @@
+digraph G {
+
+  bgcolor="transparent";
+
+  length -> altitude;
+  altitude -> height;
+  length -> displacement;
+  displacement -> position_vector;
+  length -> "path_length | arc_length";
+  "path_length | arc_length" -> distance;
+  distance -> radial_distance;
+  length -> wavelength;
+  length -> "width | breadth";
+  "width | breadth" -> diameter;
+  "width | breadth" -> radius;
+  radius -> radius_of_curvature;
+  "width | breadth" -> thickness;
+
+}
