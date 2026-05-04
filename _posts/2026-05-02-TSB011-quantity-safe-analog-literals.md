@@ -7,7 +7,7 @@ categories: c++
 
 ## Analog literals
 
-Analog literals are a cute C++ gadget proposed by Eelis in the seminal article [Multi-Dimensional Analog Literals].
+Analog literals are a cute C++ gadget proposed by Eelis in the seminal article [Multi-Dimensional Analog Literals][analog-literals].
 That forward-thinking monument to human mischief finally allowed C++ developers to represent lines, squares and cuboids directly in code:
 
 ```cpp
@@ -180,7 +180,7 @@ We are now mostly safe from a simple dimensional analysis point of view. Can we 
 
 ## Quantity kind safety
 
-The [Internal System of Quantities (ISQ)][isq] goes further than just defining quantities: it defines *quantity kinds*.
+The [International System of Quantities (ISQ)][isq] goes further than just defining quantities: it defines *quantity kinds*.
 An image is sometimes worth a thousand words. Here is the hierarchy of ISQ quantity kinds related to length:
 
 ![ISQ hierarchy of different kinds of lengths]({{ site.baseurl }}/assets/images/TSB011/kinds-of-lengths.svg){:.centered}
