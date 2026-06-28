@@ -250,7 +250,7 @@ That first hands-on experience, however small, highlighted the following small f
 * The only issue I could fully solve without overthinking it was dimensional analysis. I could not really benefit from quantity kinds because analog literals are not domain-specific enough for them to be consensually useful.
 * Getting an instinct of correct default for a quantity type is not easy: I wasn't immediately sure whether I needed to store `quantity<isq::area>`, `quantity<isq::area[pow<2>(isq::meter)]>`, `quantity<isq::area[m*m]>`, etc. Which ones worked or not sometimes felt like flipping a coin, though I guess it gets better with more experience.
 * Error messages are okay, but still much longer than anticipated.
-* I took the L when trying to use the `mp_units::si::unit_symbols` and `analog_literals::symbols` namespaces together because both use `L` as a symbol (mp-units uses it for litres, which is notably _not_ an SI unit, but the library somehow imports the `non_si::unit_symbols` namespace into the `si::units_symbols` one).
+* I took the L when trying to use the `mp_units::si::unit_symbols` and `analog_literals::symbols` namespaces together because both use `L` as a symbol (mp-units uses it for litres, which is notably _not_ an SI unit, but the library somehow imports the `non_si::unit_symbols` namespace into the `si::units_symbols` one[^3]).
 
 All in all it was a fun experiment, and I loved shining some light again on that classic piece of cursed C++ code.
 Though the fun wasn't the only thing I felt over the course of it: it left me with an odd aftertaste, a sentiment of a project remained unfinished, maybe unloved enough.
@@ -262,6 +262,8 @@ As a community, we need more curious nerds to improve the area of analog literal
   
   [^2]: [H-J-Granger/analog-literals][h-j-granger-analog-literals], 2024
 
+  [^3]: Update 2026-06-28: I discovered in the meantime that the `non_si` namespace corresponds to a [specific list of commmon units][non-si-units] described as "accepted for use with the SI". However it seems that the "accepted" term was recently dropped and BIPM only mentions them as "non-SI units" that are "important to recall".
+
   
   [analog-literals]: http://www.eelis.net/C++/analogliterals.xhtml
   [h-j-granger-analog-literals]: https://github.com/H-J-Granger/analog-literals
@@ -270,5 +272,6 @@ As a community, we need more curious nerds to improve the area of analog literal
   [max-munch]: https://en.wikipedia.org/wiki/Maximal_munch
   [mp-units]: https://mpusz.github.io/mp-units/latest/
   [mp-units-box-ambiguity]: https://mpusz.github.io/mp-units/latest/blog/2024/11/11/international-system-of-quantities-isq-part-6---challenges/?h=box#ambiguity
+  [non-si-units]: https://en.wikipedia.org/wiki/International_System_of_Units#Non-SI_units
   [si]: https://en.wikipedia.org/wiki/International_System_of_Units
   [tweaking-analog-literals]: http://blog.hostilefork.com/tweaking-analog-literals/
