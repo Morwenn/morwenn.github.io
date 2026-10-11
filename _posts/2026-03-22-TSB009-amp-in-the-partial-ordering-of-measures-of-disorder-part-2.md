@@ -232,7 +232,7 @@ For lack of better words, I am going to quote Jingsen Chen again:
 > since we may need to compute the exact sizes of the *below*-sets.
 
 We sadly end this chapter without having been able to prove anything more about $$\mathit{Amp}$$ and its place in the partial order.
-Though do not leave empty-handed either: we now have new powerful conceptual tools to understand disorder,
+Though we do not leave empty-handed either: we now have new powerful conceptual tools to understand disorder,
 as well as a few additional conjectures about the number of permutations for which $$\mathit{Amp}(X) = k$$.
 
 This is also not the end of the journey: I have more conjectures in store, and yet more angles to look at measures of disorder.

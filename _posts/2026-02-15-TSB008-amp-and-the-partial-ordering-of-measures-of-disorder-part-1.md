@@ -216,7 +216,7 @@ In a future article, we will dig further and attempt to understand how to formal
 
   [^3]: A result proven by Heikki Mannila in *Measures of Presortedness and Optimal Sorting Algorithms*.
 
-  [^4]: The place of $$Mono$$ in the graph is actually also a conjecture.
+  [^4]: The place of $$\mathit{Mono}$$ in the graph is actually also a conjecture.
         I applied similar reasoning that can be found in the [original research][original-research-mono] section of cpp-sort's documentation.
   
 
