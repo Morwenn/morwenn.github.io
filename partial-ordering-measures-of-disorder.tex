@@ -1,24 +1,15 @@
-% Copyright (c) 2021-2025 Morwenn
+% Copyright (c) 2021-2026 Morwenn
 % SPDX-License-Identifier: MIT
 
 \documentclass{standalone}
 \usepackage{bm, pgf, tikz}
-\usetikzlibrary{arrows, automata, backgrounds, positioning}
+\usetikzlibrary{arrows, automata, backgrounds, positioning, shapes}
 
 \begin{document}
     \begin{tikzpicture}[
-            background rectangle/.style={fill=white},
-            show background rectangle,
             auto,
             on grid,
-            node distance = 1.3cm and 3cm,
-            semithick
-        ]
-
-        \tikzstyle{every state}=[
-            draw=none,
-            shape=rectangle,
-            fill=white
+            node distance = 1.3cm and 3cm
         ]
 
         % A framework for adaptive sorting
@@ -27,55 +18,55 @@
         % Max=Dis equivalence comes from:
         % NeatSort - A practical adaptive algorithm
         % by M. La Rocca and D. Cantone
-        \node[state] (reg) {$\mathit{Reg}$};
-        \node[state] (loc) [below of=reg] {$\mathit{Loc}$};
-        \node[state] (sms) [right=of loc] {$\mathit{SMS}$};
-        \node[state] (osc) [below of=loc] {$\bm{\mathit{Osc}}$};
-        \node[state] (hist) [left=of loc] {$\mathit{Hist}$};
-        \node[state] (blank) [below=of osc] {};
-        \node[state] (enc) [below of=sms] {$\bm{\mathit{Enc}}$};
-        \node[state] (inv) [below of=blank] {$\bm{\mathit{Inv}}~$$\equiv$$~\bm{\mathit{Spear}}$};
-        \node[state] (rem) [left=of inv] {$\bm{\mathit{Rem}}$};
-        \node[state] (sus) [below of=enc] {$\bm{\mathit{SUS}}$};
-        \node[state] (exc) [below of=rem] {$\bm{\mathit{Exc}}~$$\equiv$$~\bm{\mathit{Ham}}$};
-        \node[state] (block) [above=of rem] {$\bm{\mathit{Block}}$};
-        \node[state] (max) [below of=inv] {$\bm{\mathit{Max}}~$$\equiv$$~\bm{\mathit{Dis}}~$};
-        \node[state] (runs) [right=of max] {$\bm{\mathit{Runs}}$};
-        \node[state] (m01) [below of=max] {$m_{01}$};
-        \node[state] (m0) [below of=m01] {$m_{0}$};
+        \node[ellipse] (reg) {$\mathit{Reg}$};
+        \node[ellipse] (loc) [below of=reg] {$\mathit{Loc}$};
+        \node[ellipse] (sms) [right=of loc] {$\mathit{SMS}$};
+        \node[ellipse] (osc) [below of=loc] {$\mathit{Osc}$};
+        \node[ellipse] (hist) [left=of loc] {$\mathit{Hist}$};
+        \node[circle] (blank) [below=of osc] {};
+        \node[ellipse] (enc) [below of=sms] {$\mathit{Enc}$};
+        \node[ellipse] (inv) [below of=blank] {$\mathit{Inv}~$$\equiv$$~\mathit{Spear}$};
+        \node[ellipse] (rem) [left=of inv] {$\mathit{Rem}$};
+        \node[ellipse] (exc) [below of=rem] {$\mathit{Exc}~$$\equiv$$~\mathit{Ham}$};
+        \node[ellipse] (block) [above=of rem] {$\mathit{Block}$};
+        \node[ellipse] (max) [below of=inv] {$\mathit{Max}~$$\equiv$$~\mathit{Dis}~$};
+        \node[ellipse] (sus) [right=of inv] {$\mathit{SUS}$};
+        \node[ellipse] (runs) [right=of max] {$\mathit{Runs}$};
+        \node[ellipse] (m01) [below of=max] {$m_{01}$};
+        \node[ellipse] (m0) [below of=m01] {$m_{0}$};
 
-        \path[-] (reg) edge node {} (hist);
-        \path[-] (reg) edge node {} (loc);
-        \path[-] (reg) edge node {} (sms);
-        \path[-] (hist) edge node {} (block);
-        \path[-] (hist) edge node {} (inv);
-        \path[-] (loc) edge node {} (block);
-        \path[-] (loc) edge node {} (osc);
-        \path[-] (sms) edge node {} (enc);
-        \path[-] (block) edge node {} (rem);
-        \path[-] (osc) edge node {} (inv);
-        \path[-] (osc) edge node {} (runs);
-        \path[-] (enc) edge node {} (sus);
-        \path[-] (rem) edge node {} (exc);
-        \path[-] (inv) edge node {} (max);
-        \path[-] (sus) edge node {} (max);
-        \path[-] (sus) edge node {} (runs);
-        \path[-] (exc) edge node {} (m01);
-        \path[-] (max) edge node {} (m01);
-        \path[-] (runs) edge node {} (m01);
-        \path[-] (m01) edge node {} (m0);
+        \draw (reg) -- (hist)
+              (reg) -- (loc)
+              (reg) -- (sms)
+              (hist) -- (block)
+              (hist) -- (inv)
+              (loc) -- (block)
+              (loc) -- (osc)
+              (sms) -- (enc)
+              (block) -- (rem)
+              (osc) -- (inv)
+              (osc) -- (runs)
+              (enc) -- (sus)
+              (rem) -- (exc)
+              (inv) -- (max)
+              (sus) -- (max)
+              (sus) -- (runs)
+              (exc) -- (m01)
+              (max) -- (m01)
+              (runs) -- (m01)
+              (m01) -- (m0);
+
+        % Original research: Amp
+        \node[circle] (blank2) [right of=sus] {};
+        \node[ellipse] (amp) [right of=blank2] {$\mathit{Amp}$};
+        \draw (amp) -- (runs);
 
         % Sort Race
-        % by H. Zhang, B. Meng and Y. Liang
-        \node[state] (mono) [right=of sus] {$\bm{\mathit{Mono}}$};
-        % See the Original Research page of the docs
-        \path[-] (enc) edge node {} (mono);
-        
-        % Original research: Amp
-        \node[state] (amp) [below=of mono] {$\bm{\mathit{Amp}}$};
-        \path[-] (amp) edge node {} (runs);
-        % Conjecture
-        \path[-] (amp) edge node {} (mono);
+        % by H. Zhang, B. Meng and Y. Liang,
+        % + original research
+        \node[ellipse] (mono) [above of=amp] {$\mathit{Mono}$~$\equiv$~$\mathit{Reve}$};
+        \draw (mono) -- (amp)
+              (mono) -- (enc);
 
     \end{tikzpicture}
 \end{document}

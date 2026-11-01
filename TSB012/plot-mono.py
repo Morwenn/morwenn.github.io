@@ -60,7 +60,8 @@ def split_sequence(sequence):
 
 pyplot.subplots(figsize=(6, 3))
 
-sequence = [4, 5, 6, 5, 7, 8, 6, 3, 3, 4, 6, 9, 9, 6, 5, 4, 8, 8, 12, 11, 9, 7, 8, 6]
+sequence = [4, 5, 6, 5, 7, 8, 6, 3, 3, 4, 6, 9, 9, 6, 5, 4, 8, 8, 12, 11, 9, 7, 8, 6]  # TSB012
+#sequence = [4, 5, 6, 5, 7, 8, 3, 3, 6, 4, 6, 9, 9, 4, 5, 6, 8, 8, 12, 7, 9, 11, 6, 8]  # TSB013
 sequence = [val - 2 for val in sequence]
 
 # Fake plots to have proper labels
