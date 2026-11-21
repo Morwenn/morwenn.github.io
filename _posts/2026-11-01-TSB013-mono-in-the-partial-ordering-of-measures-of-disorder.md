@@ -279,7 +279,7 @@ I plan to publish new articles if I ever make advances on those topics,
 but the superior measures remain out of my analysis abilities to this day.
 Nevertheless, it's interesting to see that most of the intuition-based conjectures I made in the past about the position of $$\mathit{Mono}$$ do seem to hold.
 
-It might be the end of this series for now, at least in the way I so far approached analysis of measures of dirsorder.
+It might be the end of this series for now, at least in the way I so far approached analysis of measures of disorder.
 I do plan to pursue work on the topic, albeit with new tools and new angles.
 It will require some learning though, and I don't know whether it will produce expected results,
 so it might take a while before I settle down and write another article.
