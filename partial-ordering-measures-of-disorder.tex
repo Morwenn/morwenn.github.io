@@ -4,6 +4,7 @@
 \documentclass{standalone}
 \usepackage{bm, pgf, tikz}
 \usetikzlibrary{arrows, automata, backgrounds, positioning, shapes}
+\pagestyle{empty}
 
 \begin{document}
     \begin{tikzpicture}[
@@ -45,7 +46,6 @@
               (sms) -- (enc)
               (block) -- (rem)
               (osc) -- (inv)
-              (osc) -- (runs)
               (enc) -- (sus)
               (rem) -- (exc)
               (inv) -- (max)
@@ -66,7 +66,8 @@
         % + original research
         \node[ellipse] (mono) [above of=amp] {$\mathit{Mono}$~$\equiv$~$\mathit{Reve}$};
         \draw (mono) -- (amp)
-              (mono) -- (enc);
+              (mono) -- (enc)
+              (mono) -- (osc);
 
     \end{tikzpicture}
 \end{document}
