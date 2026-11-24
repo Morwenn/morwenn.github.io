@@ -272,8 +272,8 @@ Thanks to the transitive nature of the $$\preceq$$ operator on measures of disor
 we can further refine the position of $$\mathit{Mono}$$ in the partial ordering,
 leaving only a few conjectures to prove:
 * ‎$$\mathit{Mono} \preceq \mathit{Amp}$$
-* $$\mathit{Osc} \preceq \mathit{Mono}$$ and $$\mathit{Mono} \not \preceq \mathit{Osc}$$
-* $$\mathit{Loc} \preceq \mathit{Mono}$$ and $$\mathit{Mono} \not \preceq \mathit{Loc}$$, if the previous conjectures do not hold
+* $$\mathit{Osc} \preceq \mathit{Mono}$$
+* $$\mathit{Loc} \preceq \mathit{Mono}$$, if the previous conjecture does not hold
 
 I plan to publish new articles if I ever make advances on those topics,
 but the superior measures remain out of my analysis abilities to this day.

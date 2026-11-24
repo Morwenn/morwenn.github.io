@@ -21,8 +21,8 @@ today we're going to further refine the location of $$\mathit{Mono}$$ in the par
 
 The last time, we left the picture above half-drawn, with the following conjectures left to prove:
 * ‎$$\mathit{Mono} \preceq \mathit{Amp}$$
-* $$\mathit{Osc} \preceq \mathit{Mono}$$ and $$\mathit{Mono} \not \preceq \mathit{Osc}$$
-* $$\mathit{Loc} \preceq \mathit{Mono}$$ and $$\mathit{Mono} \not \preceq \mathit{Loc}$$, if the previous conjectures do not hold
+* $$\mathit{Osc} \preceq \mathit{Mono}$$
+* $$\mathit{Loc} \preceq \mathit{Mono}$$, if the previous conjecture does not hold
 
 We are gonna go one step up that ladder and look at the relationship between $$\mathit{Mono}$$ and $$\mathit{Osc}$$,
 a measure of disorder originally introduced by Christos Levcopoulos and Ola Petersson in *Heapsort—Adapted for Presorted Files*.
